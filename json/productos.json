@@ -1,0 +1,22 @@
+[
+    {
+      "Imagen": "IMG/teclado1.jpg",
+      "Nombre": "Teclado Logitech",
+      "valor" : "$48.990"
+    },
+    {
+        "Imagen": "IMG/teclado2.jpg",
+        "Nombre": "Telcado Redragon",
+        "valor" : "$41.665"
+    },
+    {
+        "Imagen": "IMG/mouse.jpg",
+        "Nombre": "Mouse Redragon",
+        "valor" : "$19.990"
+    },
+    {
+        "Imagen": "IMG/670.png",
+        "Nombre": "Acer Nitro 5",
+        "valor" : "$749.990"
+    }
+]

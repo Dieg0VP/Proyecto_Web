@@ -1,0 +1,86 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro</title>
+  <link rel="stylesheet" href="CSS/registro.css">
+  </head>
+<body>  
+  
+  <div class="contact_form">
+
+    <div class="formulario">      
+      <h1>Registro</h1>
+        <h3>Registro de cuenta:</h3>
+
+
+          <form class="formulario" id="formulario">       
+            <div class="formulario__grupo" id="grupo__nombre">
+              <label for="nombre" class="formulario__label">Nombre</label>
+              <div class="formulario__grupo-input">
+                <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Ingrsa tu nombre">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+              </div>
+              <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+            </div>
+            <div class="formulario__grupo" id="grupo__correo">
+              <label for="correo" class="formulario__label">Correo Electrónico</label>
+              <div class="formulario__grupo-input">
+                <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+              </div>
+              <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+            </div>
+
+                <div class="formulario__grupo" id="grupo__edad">
+                  <label for="edad" class="formulario__label">Edad </label>
+                  <div class="formulario__grupo-input">
+                    <input type="number" class="formulario__input" name="edad" id="edad" placeholder="ingrese edad">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                  <p class="formulario__input-error">La edad solo puede contener numeros y el maximo son 2 digitos</p>
+                </div>  
+
+                <div class="formulario__grupo" id="grupo__password">
+                  <label for="password" class="formulario__label">Contraseña</label>
+                  <div class="formulario__grupo-input">
+                    <input type="password" class="formulario__input" name="password" id="password" placeholder="Ingresa tu contraseña">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                  <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+                </div>  
+
+                <div class="formulario__grupo" id="grupo__telefono">
+                  <label for="telefono" class="formulario__label">Teléfono</label>
+                  <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="Ingresa tu numero">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                  </div>
+                  <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14 dígitos.</p>
+                </div>
+              
+                <div>
+                  <label for="Genero" class="Genero">Genero:
+                    <span class="obligatorio">*</span>
+                  <select name="Genero" id="Genero">
+                    <option value="1">Elije tu genero</option>
+                    <option value="2">Mujer</option>
+                    <option value="3">Hombre</option>
+                    <option value="4">Otro</option>
+                  </label>
+                </select>
+                </div>       
+                <div class="formulario__mensaje" id="formulario__mensaje">
+                  <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                </div>
+          
+                <div class="formulario__grupo formulario__grupo-btn-enviar">
+                  <button type="submit" class="formulario__btn">Enviar</button>
+                  <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+                </div>
+          </form>
+    </div>  
+  </div>
+</body>
+<script src="js/formulario.js"></script>
+<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,173 @@
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+<div>
+  <div class="p-5 bg-primary text-white text-center">
+    <h1>Super Electronic's</h1>
+    <p>Tu tienda favorita de elementos electronicos!</p> 
+</div>
+    
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="laptop.html">Laptos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="accesorios.html">Accesorios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="producto.html">Productos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="carrito.html">Carrito</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="inicio sesion.html">Inicio Sesion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="registro.html">Registro</a>
+        </li>
+
+          </ul>
+        </div>
+      </nav>
+      <!-- Carousel -->
+      <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+        
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="laptop.html"><img src="IMG/laptop.png" alt="Laptos" class="d-block" style="width:100%"></a>
+          </div>
+          <div class="carousel-item">
+            <a href="accesorios.html"><img src="IMG/accesorios.png" alt="Accesorios" class="d-block" style="width:100%"></a>
+          </div>
+          <div class="carousel-item">
+            <a href="producto.html"><img src="IMG/productos.webp" alt="Productos" class="d-block" style="width:100%"></a>
+          </div>
+        </div>
+        
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+
+      <br>
+    <div id="contenedor" class="contenedor">
+        <div> 
+            <img src="IMG/663.png" alt="producto 1">
+            <div class="informacion">
+              <div><h3>Acer Pedrator helios 300</h3>
+                <p>Intel i7-10750H, RTX 3060</p>                    
+                <p class="precio">$1.591.305</p></div>
+                <button><a href="carrito.html">Comprar</a></button>
+            </div>
+        </div>
+        <div>
+            <img src="img/664.png" alt="producto 2">
+            <div class="informacion">
+                <div><h3>HP Victus 16</h3> 
+                  <p>i7-11800H, RTX 3060</p>                  
+                  <p class="precio">$899.990</p></div>
+                <button><a href="carrito.html">Comprar</a></button>
+            </div>
+        </div>
+        <div>
+            <img src="img/pe_3.png" alt="producto 3">
+            <div class="informacion">
+               <div><h3>MSI GF65 Thin</h3>
+                <p>i7-9750H,rtx 2060</p>                   
+                <p class="precio">$1.599.990</p></div>
+                <button><a href="carrito.html">Comprar</a></button>
+            </div>
+        </div>
+        <div>
+            <img src="img/665.png" alt="producto 4">
+            <div class="informacion">
+                <div><h3>Asus TUF F15</h3>
+                  <p>Intel i5-10750H, RTX 1650</p>                    
+                  <p class="precio">$2.174.899</p></div>
+                <button><a href="carrito.html">Comprar</a></button>
+            </div>
+        </div>
+        <div>
+            <img src="img/667.png" alt="producto 5">
+            <div class="informacion">
+                <div><h3>Asus ROG STrix</h3> 
+                  <p>Ryzen 9, RTX 3070 Ti</p>                  
+                  <p class="precio">$1.999.990</p></div>
+                <button><a href="carrito.html">Comprar</a></button>
+            </div>
+        </div>
+        <div>
+            <img src="img/668.png" alt="producto 6">
+            <div class="informacion">
+                <div><h3>MSI Alpha 17</h3>  
+                  <p>Ryzen 7 4800H, RX 5600M</p>                 
+                  <p class="precio">$1.700.000</p></div>
+                <button><a href="carrito.html">Comprar</a></button>
+            </div>
+        </div>
+        <div>
+            <img src="img/669.png" alt="producto 7">
+            <div class="informacion">
+                <div><h3>Acer Predator helios</h3>
+                  <p>i7 8750H, GTX 1060</p>                   
+                  <p class="precio">$1.056.989</p></div>
+                <button><a href="carrito.html">Comprar</a></button>
+            </div>
+        </div>
+        <div>
+            <img src="img/670.png" alt="producto 8">
+            <div class="informacion">
+                <div><h3>Acer Nitro 5</h3>   
+                  <p>i5-10750H,GTX 1650</p>                
+                  <p class="precio">$749.990</p></div>
+                <button><a href="carrito.html">Comprar</a></button>
+            </div>
+          </div>
+          <div>
+            <img src="img/pe_9.png" alt="producto 9">
+            <div class="informacion">
+              <div><h3>Legion 7I 6ta gen</h3>
+                <p>i7-11800H, RTX3060</p>            
+                <p class="precio">$2.199.990</p></div>
+                <button><a href="carrito.html">Comprar</a></button>
+            </div>
+        </div>
+    </div>
+    <div>
+      <div class="mt-5 p-4 bg-dark text-white text-center">
+        <h1>Super Electronic's</h1>
+        <p><a href="laptop.html">Volver Arriba</a></p>
+        <div class="row">
+          <div class="col-sm-3"><img src="IMG/whatapp.png" alt="Redes" class="IMG"> +56 9 2323 4343</div>
+          <div class="col-sm-3"><img src="IMG/instagram.png" alt="Redes" class="IMG"> SuperElectronics_CL</div>
+          <div class="col-sm-3"><img src="IMG/twitter.png" alt="Redes" class="IMG"> SuperElectronics_CL</div>
+          <div class="col-sm-3"><img src="IMG/maps.png" alt="Redes" class="IMG">PROXIMAMENTE</div>
+        </div>
+      </div>
+</body>
+</html>
