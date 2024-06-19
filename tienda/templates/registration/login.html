@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>login - Super Electronic's</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/cf66e7ba08.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/style-login.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+        <a href="#"><H5>SUPER ELECTRONIC'S</H5></a>
+        <H5>LOGIN</H5>
+        </header>
+        <form method="post">
+        {% csrf_token %}
+          <div class="field email">
+            <div class="input-area">
+              <input type="text" name="username" placeholder="username">
+              <i class="icon fas fa-envelope"></i>
+              <i class="error error-icon fas fa-exclamation-circle"></i>
+            </div>
+          </div>
+          <div class="field password">
+            <div class="input-area">
+              <input type="password" name="password" placeholder="password">
+              <i class="icon fas fa-lock"></i>
+              <i class="error error-icon fas fa-exclamation-circle"></i>
+            </div>
+          </div>
+          <div class="pass-txt"><a href="#">¿Olvido su contraseña?</a></div>
+          <input type="submit" value="Iniciar Sesion">
+        </form>
+        <div class="sign-txt">¿No tienes una cuenta? <a href="{% url 'registro' %}">Regístrate ahora</a>
+        </div>
+      </div>
+</body>
+</html>

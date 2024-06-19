@@ -1,0 +1,88 @@
+{% extends 'tienda/base.html'%}
+{% block contenido %}
+{% load humanize %}
+{% load static %}
+
+</div>
+<div id="carusel">
+  <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+
+    <!-- The slideshow/carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+      <!-- Indicators/dots -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+      </div>
+
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="{% url 'catalogo_general' %}"><img
+              src="https://www.91-cdn.com/hub/wp-content/uploads/2022/07/Top-laptop-brands-in-India.jpg" alt="Laptos"
+              class="d-block" style="width:100%"></a>
+        </div>
+        <div class="carousel-item">
+          <a href="{% url 'catalogo_general' %}"><img
+              src="https://ae01.alicdn.com/kf/H1aa28d9d3acb4efa9beb8621a5370cbbN/Mochila-De-Negocios-PZ4-repelente-al-agua-para-hombre-bolsa-de-m-sica-para-el-trabajo.jpg"
+              alt="Accesorios" class="d-block" style="width:100%"></a>
+        </div>
+        <div class="carousel-item">
+          <a href="{% url 'catalogo_general' %}"><img
+              src="https://www.blogdelfotografo.com/wp-content/uploads/2021/03/mega-guia-reflex-3.jpg" alt="Productos"
+              class="d-block" style="width:100%"></a>
+        </div>
+      </div>
+
+      <!-- Left and right controls/icons -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+    <br>
+    <div class="col-auto text-center">
+      <h2>Productos recomendados</h2>
+    </div>
+    </section>
+
+    <section class="contenedor">
+      <!-- Contenedor de elementos -->
+      <div class="contenedor-items">
+        <div class="item">
+          <span class="titulo-item">MOUSE INALÁMBRICO RAZER BASILISK X HYPERSPEED GAMER 16000 DPI
+          </span>
+          <img src="{% static 'img/muse.jpg' %}" class="img-item">
+          <span class="precio-item">$37,990</span>
+          <button class="boton-item">Agregar al Carrito</button>
+        </div>
+        <div class="item">
+          <span class="titulo-item">MOUSE GAMER INALÁMBRICO LIGHTSPEED G502 LOGITECH
+          </span>
+          <img src="{% static 'img/muselg.png' %}" class="img-item">
+          <span class="precio-item">$73,900</span>
+          <button class="boton-item">Agregar al Carrito</button>
+        </div>
+        <div class="item">
+          <span class="titulo-item">CAMARA CANON T7 + 18-55
+          </span>
+          <img src="{% static 'img/camera.jpg' %}" class="img-item">
+          <span class="precio-item">$449,990</span>
+          <button class="boton-item">Agregar al Carrito</button>
+        </div>
+      </div>
+    </section>
+    <br>
+    <br>
+    <br>
+{% endblock %}

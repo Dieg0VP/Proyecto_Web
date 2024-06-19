@@ -1,0 +1,120 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Super Electronic's</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/cf66e7ba08.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/style-conta.css' %}">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'index' %}">SUPER ELECTRONIC'S</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link " href="#">USUARIO: {{user}}</a>
+            </li>
+            {% endif %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'index' %}">INICIO</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="{% url 'catalogo_general' %}">CATALOGO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'contacto' %}">CONTACTO</a>
+            </li>
+            {% if is_superuser %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'listar-producto' %}">VER LISTA PRODUCTOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'agregar-producto' %}">AGREGAR PRODUCTOS</a>
+            </li>
+            {% else %}
+            {% endif %}
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'salir' %}">CERRAR SESSION</a>
+            </li> 
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'login' %}">LOGEARSE</a>
+            </li>
+            {% endif %}
+          </ul>
+        </div>
+    </nav>
+  </header>
+    <div class="contenedor">
+      <h1>Formulario de contacto</h1>
+      <div class="contenido">
+        <div class="info">
+
+          <div class="col">
+            <i class="icono fas fa-map-marker-alt"></i>
+            <p>PROXIMAMENTE DIRECCION</p>
+          </div>
+
+          <div class="col">
+            <i class="icono fas fa-envelope"></i>
+            <p>superelectronics.cl@gmail.com</p>
+          </div>
+
+          <div class="col">
+            <i class="icono fas fa-phone"></i>
+            <p> (32) XXXX-XXXX <br> +56 9 XXXX XXXX</p>
+          </div>
+          <div class="redes-s">
+             <i>Redes Sociales</i>
+          </div>
+          <div class="redes-s">
+        
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+
+          </div>
+
+        </div>
+        <form action="enviado.html" method="get" class="formulario">
+          <input type="text" name="nombre" placeholder="Nombre" id="nombre">
+          <input type="text" name="correo" placeholder="Correo electronico" id="email">
+          <input type="text" name="asuntos" placeholder="Asuntos" id="asunto">
+          <textarea name="mensaje" id="mensaje" placeholder="mensaje"></textarea>
+          <button type="button" onclick="validarFormulario()">Enviar consulta</button>
+
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+</body>
+
+</html>

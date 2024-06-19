@@ -1,0 +1,36 @@
+{% extends 'tienda/base.html'%}
+{% block contenido %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Catálogo General</title>
+  <link rel="stylesheet" href="{% static 'css/catalogo.css' %}">
+</head>
+<body>
+  <div class="producto-container">
+    {% for catalogo in catalogos %}
+    <div class="producto">
+      <h3>{{ catalogo.nombre_catalogo }}</h3>
+      <a href="{% url 'catalogo_desc' catalogo.id %}" class="btn-ver">Ver productos</a>
+    </div>
+    {% endfor %}
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</body>
+</html>
+{%endblock%}

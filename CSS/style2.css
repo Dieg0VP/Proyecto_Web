@@ -1,9 +1,0 @@
-body{
-    background: rgb(255, 255, 255);
-    background: linear-gradient(to right, #5f6de9,white);
-}
-
-.errores{
-    display: none;
-    color: #fff;
-}
