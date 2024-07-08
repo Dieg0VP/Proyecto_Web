@@ -50,11 +50,11 @@
             {% endif %}
             {% if user.is_authenticated %}
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'salir' %}">CERRAR SESSION</a>
+              <a class="nav-link" href="{% url 'salir' %}">CERRAR SESION</a>
             </li> 
             {% else %}
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'login' %}">LOGEARSE</a>
+              <a class="nav-link" href="{% url 'login' %}">INICIAR SESIÓN</a>
             </li>
             {% endif %}
           </ul>
